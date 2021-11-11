@@ -1,0 +1,611 @@
+
+/*General*/
+body {
+    font-family: Roboto,shrikhand;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+   
+}
+.flexCentre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sizeLiens {
+    width: 45%;
+
+}
+
+.flexColumnCentre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*header*/
+
+.header-omf {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 65px;
+    box-shadow: 0 2px 4px #636363cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+}
+.header-omf__arrow {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.9rem ;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header-omf__arrow:hover {
+    color: rgba(0, 0, 0,0.8);
+
+}
+.header-omf__logo {
+    width: 190px;
+}
+.under-header {
+    background: #ececec;
+    padding-bottom: 30px;
+}
+.emplacement {
+    background: #d3d3d3;
+}
+.location__link {
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.location__text {
+    margin: 0  15px;
+}
+.emplacement .fas {
+    margin-bottom: 2px;
+ }
+
+ .bloc-accroche__title {
+     font-weight: bold;
+     font-size: 30px;
+     text-align: center;
+     margin: 40px 50px 20px 50px;
+
+ }
+ .bloc-accroche__text {
+     font-weight: normal;
+     font-size: 1rem;
+     text-align: center;
+     margin: 0 20px;
+ }
+
+ .under-header-omf {
+     overflow: hidden;
+     height: 320px;
+ }
+ .under-header-omf__picture {
+     height: 100%;
+     width: 100%;
+     object-fit:cover;
+     object-position: center bottom;
+ }
+
+ /*boutton omf*/
+ .omf-btn {
+     position: relative;
+     display:  block;
+     text-decoration: none;
+     width: 220px;
+     height: 50px;
+     margin: 30px auto;
+     border-radius: 30px;
+     background: linear-gradient(#FF79DA, #9356DC);
+     box-shadow: 0 2px 4px #636363cc;
+     z-index: 1;
+     
+    
+ }
+ .omf-btn__title {
+     text-align: center;
+     padding-top: 15px;
+     color: white;
+     font-weight: bold;
+ }
+ .omf-btn:hover::after {
+     opacity: 1;
+ }
+ .omf-btn::after {
+     content: "";
+     position: absolute;
+     border-radius: 30px;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background:linear-gradient(#9356DC, #ae80e5);
+     opacity: 0 ;
+     z-index: -1 ;
+     transition: opacity 250ms;
+    
+     
+ }
+ 
+ /*la partie qui concerne le bloc nav "Fonctionnement"*/
+
+ .bloc-title { 
+     font-weight: bold;
+     padding: 50px 0 10px 20px;
+     margin: 0;
+ }
+ .bloc-fonctionnement {
+     padding-bottom: 50px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+   
+ }
+ .onglet-font {
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     background:#ececec;
+     border-radius: 20px;
+     margin: 10px 20px 10px 25px;
+     box-shadow: 2px 2px 7px #d3d3d3;
+ }
+
+ .onglet-font__ball {
+     position: relative;
+     margin-left: -10px;
+     height: 27px;
+     width: 27px;
+     background: #9356DC;
+     border-radius: 20px;
+ }
+ .onglet-font.fas { 
+     width: 15px;
+     height: 15px;
+     color: #636363cc;
+     margin-left: 20px;
+ }
+ .onglet-font__numb {
+     margin: 4px 0 0 9px;
+     font-weight: bold;
+     color: white;
+ }
+
+ .onglet-font__text {
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+     font-size: 1rem;
+     padding: 27px;
+     margin: 0;
+ }
+ .spaceTexteIcon {
+    margin-right: 10px;
+ }
+
+ .onglet-font:hover {
+     background:#f2eafb;
+     transition: 0.5s linear;
+
+ }
+
+ .onglet-font:hover.fas{ 
+     color: #9356dc;
+     transition: 0.5s linear;
+ }
+ 
+ .onglet-font__text {
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+     font-size: 1rem;
+     padding: 27px;
+     margin: 0;
+ }
+ .onglet-font:hover {
+     background: #f2eafb;
+     transition: 0.5s linear;
+ }
+ 
+ @media screen and (min-width: 580px) {
+     .onglet-font{
+         width: 100%;
+     }
+    
+    }
+
+     
+
+ .fond-gris {
+     background: #ececec;
+ }
+ .fond-gris__withbr {
+     border-radius: 20px;
+ }
+ .bloc-restaurant { 
+     padding-bottom: 50px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+ }    
+ .rest-prev {
+     position: relative;
+     background: white;
+     height: 250px;
+     width: 90%;
+     border-radius: 20px;
+     margin: 20px;
+     box-shadow: 2px 2px 7px #d3d3d3;
+     position: relative;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    block-size: auto;
+  
+     
+     
+ }
+ .rest-prev__link  { 
+     text-decoration: none;
+     color:black;
+ }
+ .rest-prev__card { 
+     overflow: hidden;
+     height: 70%;
+ }
+ .rest-prev--cardpicture { 
+     border-radius: 20px 20px 0px 0px;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ /*etiquettes de nouveau(in side of the box and bloc restaurant)*/
+.rest-prev__new {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #99e2D0;
+    border-radius: 2px;
+        }
+
+    
+.rest-prev__newtext{ 
+    display: block;
+    font-size: 0.9rem;
+    text-align: center;
+    color: black;
+    padding: 8px;  
+    
+
+}
+.rest-prev-title { 
+    margin: 15px 0px 5px 15px ;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.rest-prev__place { 
+    margin: 0px 0px 0px 15px ;
+    font-weight: normal;
+    font-size: 1rem;
+}
+.rest-prev .hoverheart:hover .fas.fa-heart {
+    opacity: 1;
+    transition: 0.3s   ease-in-out;
+}
+.rest-prev .hoverheart:hover .far.fa-heart { 
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+/*réalisation du coeur (bloc 1)*/
+.rest-prev .fas.fa-heart { 
+
+  
+    width: auto;
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+    background:linear-gradient(#FF79DA,#9356DC);
+    background-clip:padding-box;
+    color: transparent;
+    opacity: 0;
+    content: "";
+    font-weight: bold;
+     
+  }
+
+.rest-prev .far.fa-heart {
+    
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+    opacity: 1; 
+    
+
+}
+/*fin coeur 1page html*/ 
+/*responsive */
+@media screen and (min-width:580px) {
+    .bloc-fonctionnement {
+        flex-direction: row;
+        justify-content: space-between;
+        
+
+    }
+    .bloc-restaurant {
+        flex-direction:   row;
+        justify-content:  space-between;
+        
+       
+    }
+}
+/*responsive fin */
+
+.menu-fond-gris { 
+    position: relative;
+    background-color: #ececec;
+    border-radius: 45px 45px 0px 0px ;
+    margin-top: -50px;
+    padding-bottom: 10px;
+}
+.page-restaurant { 
+    margin:  0px 20px;
+       
+    
+}
+.page-restaurant__title { 
+    font-family:"shrikhand" ;
+    font-size: 2rem ;
+    margin: 0;
+    padding-top:  20px ;
+}
+.page-restaurant .hoverheart:hover .fas.fa-heart { 
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.page-restaurant .hoverheart:hover .far.fa-heart { 
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+   
+}
+
+/*coeur animation bloc2*/
+.page-restaurant .fas.fa-heart {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    background: linear-gradient(#FF79DA, #9356dc);
+    background-clip: padding-box;
+    color:transparent ;
+    opacity: 0;
+    font-weight: bold;
+    
+}
+
+.page-restaurant .far.fa-heart { 
+     
+    
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    opacity: 1;
+}
+
+/*fin coeur pages html1234*/
+
+.page-menu {
+    display: flex;
+    flex-direction: column;
+   
+}
+.page-menu__title { 
+    margin-bottom: 15px;
+}
+.page-menu__text {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 20px 0px 8px 0px;
+}
+.page-menu__line { 
+    background-color: #99E2D0;
+    margin: 0;
+    height: 3px;
+    width: 40px;
+}
+.page-menu__bloc { 
+    margin: 0 15px 15px 0;
+    background: white;
+    height: 75px;   
+    width: 100%;
+    border-radius: 20px;   
+    box-shadow: 2px 2px 7px #d3d3d3;
+    position: relative;
+    overflow: hidden;
+    
+}
+.page-menu__bloc:hover .page-menu__acceptprix {
+    width: calc(100% - 65px);
+    transition: width 0.5s ease-in-out;
+}
+.page-menu__bloc:hover .page-menu__check { 
+    transform: translateX(0);
+    transition: 0.3s ease-in-out;
+     }
+.page-menu__plat { 
+    margin: 15px 0px 5px 15px ;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.page-menu__acceptprix {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    transform-origin: left 50%;
+    transition-duration: 0.5s;
+}
+.page-menu__accompagnement {
+    margin: 0px 0px 0px 15px ;
+    font-weight: normal;
+    font-size: 0.85rem ;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.page-menu__prix { 
+    margin: 0;
+    font-weight: bold;
+    padding-left: 10px;
+    width: 50px;
+   
+   
+}
+
+.page-menu__check {
+    color: #fff ;
+    background-color: #99E2D0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 65px;
+    height: 80px;
+    transform-origin:right;
+    border-radius: 0px 20px 20px 0px;
+    transform:translateX(65px);
+    overflow: hidden;
+    transition-duration: 0.5s;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    right: 0px;
+    padding-top: 28px;
+    
+    
+}
+
+
+
+.page-menu .fas .fa-check-circle {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    font-size: 1.5rem;
+    color:white;
+    opacity: 1;
+}
+/*animmation Pour html1234 du circle*/
+.page-menu__title >:nth-of-type(2) {
+    animation: SlideDown 0.4s ease-in;
+}
+.page-menu >:nth-of-type(3) {
+    animation: SlideDown 0.8s ease-in-out;
+}
+.page-menu >:nth-of-type(4) { 
+    animation: SlideDown 1.2s ease-in-out;
+}
+.page-menu >:nth-of-type(5) {   
+    animation: SlideDown 1.6s ease-in-out;
+
+}
+
+@keyframes SlideDown {
+   
+     
+    To {
+         transform: translateY(0px);
+         opacity:   1;
+
+     }
+    
+}
+
+/* fin animmation Pour html1234 du circle*/
+/*Responsive html1234 */
+@media screen and (min-with: 580px) {
+    .page-menu {
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+/*Responsive html1234 fin  */
+
+/*footer bloc*/
+.footer-omf {
+    width: 100% ;
+    background-color: #354146;
+}
+.footer-omf__title { 
+    color:white;   
+    font-family: Shrikhand;    
+    letter-spacing: 0.09rem   ;
+    margin: 0;
+    padding: 20px 0px 18px 0px;
+    text-align: center;
+}
+
+.footer-omf__bloc {
+    margin: 0px 20px;
+    }
+
+.footer-omf__bloctext { 
+    margin: 8px 0;
+    text-align: center;
+   
+}
+
+.footer-omf__bloctext .fas {
+    font-size: 0.7rem;
+    margin-right: 8px;
+}
+
+.footer-omf__bloclink { 
+    text-decoration: none;
+    color:white;
+    font-weight: normal;
+    font-size: 1rem;
+}
+.footer-omf__bloclinklight { 
+    text-decoration: none;
+    color:white;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/*fin du bloc footer*/
+
+
+
+ 
+ 
