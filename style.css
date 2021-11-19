@@ -1,11 +1,16 @@
 
 /*General*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
 body {
     font-family: Roboto,shrikhand;
     width: 100%;
     margin: auto;
     box-sizing: border-box;
-   
+    
 }
 .flexCentre{
     display: flex;
@@ -295,14 +300,13 @@ body {
         }
 
     
-.rest-prev__newtext{ 
+.rest-prev__newtext { 
     display: block;
     font-size: 0.9rem;
     text-align: center;
     color: black;
     padding: 8px;  
-    
-
+ 
 }
 .rest-prev-title { 
     margin: 15px 0px 5px 15px ;
@@ -330,9 +334,10 @@ body {
     position: absolute;
     right: 25px;
     bottom: 30px;
-    background:linear-gradient(#FF79DA,#9356DC);
-    background-clip:padding-box;
-    color: transparent;
+    background: linear-gradient(to right, #FF79DA 0%, #9356dc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     opacity: 0;
     content: "";
     font-weight: bold;
@@ -344,10 +349,8 @@ body {
     position: absolute;
     right: 25px;
     bottom: 30px;
-    opacity: 1; 
+    opacity: 1;  }
     
-
-}
 /*fin coeur 1page html*/ 
 /*responsive */
 @media screen and (min-width:580px) {
@@ -397,27 +400,31 @@ body {
 }
 
 /*coeur animation bloc2*/
-.page-restaurant .fas.fa-heart {
+.page-restaurant .fas.fa-heart  {
+
+    width: auto;
+    height: auto;
     content: "";
     position: absolute;
     right: 25px;
     top: 30px;
-    background: linear-gradient(#FF79DA, #9356dc);
-    background-clip: padding-box;
-    color:transparent ;
-    opacity: 0;
-    font-weight: bold;
+    background: linear-gradient(to right, #FF79DA 0%, #9356dc 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+    
     
 }
 
 .page-restaurant .far.fa-heart { 
-     
     
     position: absolute;
     right: 25px;
     top: 30px;
     opacity: 1;
 }
+  
 
 /*fin coeur pages html1234*/
 
@@ -524,6 +531,73 @@ body {
     color:white;
     opacity: 1;
 }
+ 
+/*loader* début */
+.loader {
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    animation: loader 1s linear 2s forwards;
+    position: fixed;
+    
+ }
+ 
+ .spinner { 
+    position: fixed;
+    height: 120px;
+    width: 120px;
+    border: 15px solid transparent;
+    border-top-color:#99E2D0;
+    border-bottom-color:blueviolet ;
+    border-left-color:yellow  ;
+    border-right-color:yellow ;
+    top: 45%;
+    left: 50%;
+    margin: -40px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    
+ }
+ .spinner:before,::after { 
+    content:'';
+    position: absolute;
+    border: 3px solid transparent;
+    border-radius: 50%;
+  }
+
+  .spinner:before { 
+    
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    animation: spin 2s linear infinite;
+  }
+
+  .spinner ::after { 
+    border-top-color: #FF79DA;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;  
+    animation: spin 3s linear infinite;
+ }
+
+ @keyframes loader {
+    0% {
+      opacity: 1;
+    }
+    100% {
+        
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+ /*loader* Fin */
+
 /*animmation Pour html1234 du circle*/
 .page-menu__title >:nth-of-type(2) {
     animation: SlideDown 0.4s ease-in;
@@ -538,12 +612,18 @@ body {
     animation: SlideDown 1.6s ease-in-out;
 
 }
+.page-menu__bloc:hover i{
+    transform: rotate(360deg);
+}
 
+.page-menu__bloc i{
+    transition: transform 1s;
+}
 @keyframes SlideDown {
    
      
     To {
-         transform: translateY(0px);
+         transform: translate(0px);
          opacity:   1;
 
      }
